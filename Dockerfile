@@ -5,4 +5,4 @@ EXPOSE 443
 
 FROM base AS final
 WORKDIR /app
-ENTRYPOINT ["dotnet", "*.dll"]
+CMD dotnet *.dll
