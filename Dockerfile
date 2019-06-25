@@ -1,4 +1,8 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build-env
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1-stretch-slim AS base
 WORKDIR /app
-ENTRYPOINT ["dotnet", "atlantis-project-api-device.dll"]
+EXPOSE 80
+EXPOSE 443
+
+FROM base AS final
+WORKDIR /app
+ENTRYPOINT ["dotnet", "*.dll"]
