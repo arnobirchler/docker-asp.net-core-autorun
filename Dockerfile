@@ -1,3 +1,3 @@
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 WORKDIR /app
-ENTRYPOINT [“dotnet”, “*.dll”]
+ENTRYPOINT ["dotnet", "*.dll"]
