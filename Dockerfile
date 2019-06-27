@@ -6,4 +6,5 @@ EXPOSE 443
 FROM base AS final
 WORKDIR /app
 ENV APPNAME *
-CMD dotnet ${applicationName}.dll
+run echo "dotnet ${applicationName}"
+CMD dotnet ${applicationName}
